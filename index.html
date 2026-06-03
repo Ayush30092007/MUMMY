@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mummy ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#ff4b7d,#ff758c,#ffb199);
+    text-align:center;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    padding:40px 20px;
+}
+
+h1{
+    font-size:60px;
+    margin-bottom:20px;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px white;
+    }
+    to{
+        text-shadow:0 0 25px gold,
+                    0 0 40px pink;
+    }
+}
+
+.subtitle{
+    font-size:24px;
+    margin-bottom:40px;
+}
+
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.gallery img{
+    width:320px;
+    max-width:90%;
+    height:420px;
+    object-fit:cover;
+    border-radius:25px;
+    border:5px solid white;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.message{
+    max-width:900px;
+    margin:40px auto;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+    font-size:22px;
+    line-height:1.8;
+}
+
+audio{
+    width:320px;
+    margin:20px;
+}
+.play-btn{
+    display:inline-block;
+    padding:18px 40px;
+    font-size:22px;
+    font-weight:bold;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff006e,#ff4d6d,#ff758f);
+    box-shadow:0 0 20px rgba(255,255,255,0.5);
+    transition:all 0.4s ease;
+    animation:pulse 2s infinite;
+    margin-top:20px;
+}
+
+.play-btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 30px white,
+               0 0 50px pink;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+    100%{transform:scale(1);}
+}
+
+footer{
+    margin-top:30px;
+    padding-bottom:30px;
+    font-size:20px;
+}
+
+.heart{
+    position:fixed;
+    bottom:-50px;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>🎂 Happy Birthday Mummy ❤️</h1>
+
+<p class="subtitle">
+माझ्या जगातील सर्वात सुंदर आणि खास व्यक्तीला वाढदिवसाच्या खूप खूप शुभेच्छा 💖
+</p>
+
+<div class="gallery">
+
+<img src="mummy1.jpg" alt="Mummy">
+
+<img src="mummy2.jpg" alt="Mummy">
+
+</div>
+
+<div class="message">
+
+प्रिय आई ❤️,
+
+तू माझ्या आयुष्यातील सर्वात मोठी ताकद आहेस.
+
+तुझं प्रेम, तुझी काळजी आणि तुझे आशीर्वाद यांच्यामुळेच मी आज इथे आहे.
+
+माझ्यासाठी तू फक्त आई नाहीस,
+तर माझी सर्वात चांगली मैत्रीण, मार्गदर्शक आणि प्रेरणा आहेस.
+
+आजच्या या खास दिवशी देवाकडे एकच प्रार्थना करतो की,
+तुला नेहमी आनंद, आरोग्य आणि भरपूर प्रेम मिळो. ✨
+
+🎉 Happy Birthday Mummy 🎉
+
+Love You Forever ❤️
+
+— Your Son ❤️
+
+</div>
+
+<h2>🎵 Song For My Mom ❤️</h2>
+
+<a href="#" onclick="document.getElementById('song').play(); return false;" class="play-btn">
+🎵 Play Special Song For Mom ❤️
+</a>
+
+<br><br>
+
+<audio id="song" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+<footer>
+💖 Made With Love For My Beautiful Mom 💖
+</footer>
+
+</div>
+
+<script>
+
+for(let i=0;i<40;i++){
+
+let heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+heart.style.animationDuration=(5+Math.random()*6)+"s";
+
+heart.style.animationDelay=Math.random()*5+"s";
+
+document.body.appendChild(heart);
+}
+
+</script>
+
+</body>
+</html>
